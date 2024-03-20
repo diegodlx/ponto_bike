@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <html>
+        <head>
+            <title>Reserva de equipamento</title>
+        </head>
+        <script>
+            const Parse = require('parse/node');
+            
+            Parse.initialize('N8mGmwDOUCMa8aYAknJ2tbwoxvwXTCT4YM5ZVP4r', // This is your Application ID
+            'iBPOD8450vCdh3S6fyGFABzItsdxXeJI2lCgtBwG', // This is your Javascript key
+            'Yyi8LyrwYndgWVnciMcYWuXNslhLpe3ppa7AISpe' // This is your Master key (never use it in the frontend)
+            );
+            Parse.serverURL = 'https://parseapi.back4app.com'; // This is your Server URL
+        </script>
+        <body>
+            <p>Nova reserva</p>
+
+            <input id="equipamento" type="equipamento" placeholder="Equipamento" />
+            <input id="dia" type="dia" placeholder="Dia" />
+            <input id="hora" type="hora" placeholder="Hora" />
+            <input id="pagamento" type="pagamento" placeholder="Pagamento" />
+            <button id="createButton">Fazer reserva</button>
+
+            <button onclick="myFunction()">Fazer reservas</button>
+
+<p id="demo"></p>
+<script src="reserva.js"></script>
+
+        </body>
+    </html>
+
+
+
+
+
+    

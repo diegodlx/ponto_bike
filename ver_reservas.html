@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<p>Lista de reservas</p>
+
+<button onclick="myFunction()">Mostrar reservas!</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  Parse.serverURL = 'https://parseapi.back4app.com';
+Parse.initialize('N8mGmwDOUCMa8aYAknJ2tbwoxvwXTCT4YM5ZVP4r', 'iBPOD8450vCdh3S6fyGFABzItsdxXeJI2lCgtBwG', 'Yyi8LyrwYndgWVnciMcYWuXNslhLpe3ppa7AISpe');
+
+(async () => {
+  const Reserva = Parse.Object.extend('Reserva');
+  const query = new Parse.Query(Reserva);
+  // You can also query by using a parameter of an object
+  // query.equalTo('objectId', 'xKue915KBG');
+  try {
+    const results = await query.find();
+    for (const object of results) {
+      // Access the Parse Object attributes using the .GET method
+      const Equipamento = object.get('Equipamento')
+      const Pagamento = object.get('Pagamento')
+      const Dia = object.get('Dia')
+      const Hora = object.get('Hora')
+      console.log(Equipamento);
+      console.log(Pagamento);
+      console.log(Dia);
+      console.log(Hora);
+    }
+  } catch (error) {
+    console.error('Error while fetching Reserva', error);
+  }
+})();
+;
+}
+</script>
+
+</body>
+</html>

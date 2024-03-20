@@ -1,8 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
 <html>
     <head>
         <title>PONTO BIKE</title>
     </head>
+    <script>
+        const Parse = require('parse/node');
+        
+        Parse.initialize('N8mGmwDOUCMa8aYAknJ2tbwoxvwXTCT4YM5ZVP4r', // This is your Application ID
+        'iBPOD8450vCdh3S6fyGFABzItsdxXeJI2lCgtBwG', // This is your Javascript key
+        'Yyi8LyrwYndgWVnciMcYWuXNslhLpe3ppa7AISpe' // This is your Master key (never use it in the frontend)
+        );
+        Parse.serverURL = 'https://parseapi.back4app.com'; // This is your Server URL
+    </script>
     <body>
-        Bem vindo site do Ponto Bike
+        <h1>Bem vindo site do Ponto Bike</h1>
+        <h2>sistema de reserva online</h2>
+        <p>Equipamentos disponíveis:</p>
+        <img src="https://bicicletandobikeshop.com.br/image/cache/catalog/queen%202.0/photo_5170650053675691058_y-980x500.jpg" alt="Bicicleta aro 29 com marcha." width="500" height="250">
+        <img src="https://loja.shineray.com.br/wp-content/uploads/2023/09/Foto-Capa-PTXR.webp" alt="Patinete elétrico." width="300" height="250">
+        <h1>
+            <a href="./reserva.html">Reservar um equipamento</a>
+        </h1>
+        <h1>
+            <a href="./ver_reservas.html">Ver reservas atuais</a>
+        </h1>
+
     </body>
 </html>
+
